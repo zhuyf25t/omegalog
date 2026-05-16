@@ -1,0 +1,7 @@
+node_modules/
+dist/
+test-results/
+
+*.log
+*.png
+!src/assets/*.png
