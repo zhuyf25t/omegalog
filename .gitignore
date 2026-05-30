@@ -1,7 +1,16 @@
 node_modules/
 dist/
-test-results/
+target/
+
+frontend/node_modules/
+frontend/dist/
+backend/target/
+backend/project/target/
+project-old-structure/dist/
 
 *.log
-*.png
-!src/assets/*.png
+.env
+.env.*
+.DS_Store
+.bsp/
+.metals/

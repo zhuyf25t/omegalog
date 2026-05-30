@@ -1,0 +1,166 @@
+﻿@media (max-width: 1260px) {
+  html,
+  body,
+  #root {
+    height: auto;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .app-shell {
+    width: min(100vw - 36px, 1120px);
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+
+  .app-header,
+  .workspace-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-layout {
+    height: auto;
+  }
+
+  .focus-panel,
+  .archive-desk {
+    height: auto;
+    position: relative;
+    top: auto;
+    min-height: auto;
+  }
+
+  .archive-desk {
+    min-height: 0;
+  }
+
+  .task-list-section {
+    --task-list-columns: minmax(230px, 1.12fr) minmax(220px, 0.9fr) minmax(150px, 0.58fr) minmax(168px, 0.64fr);
+  }
+
+  .row-title-cell {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .row-thumb {
+    width: 88px;
+    height: 58px;
+  }
+
+  .status-action-cell {
+    gap: 8px;
+  }
+
+  .composer {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-height: none;
+  }
+
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    width: min(100vw - 24px, 760px);
+    padding-top: 22px;
+  }
+
+  .hero h1 {
+    font-size: 3.35rem;
+  }
+
+  .header-actions {
+    justify-content: flex-start;
+  }
+
+  .toolbar-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .segmented-control,
+  .sort-select,
+  .sort-select select {
+    width: 100%;
+  }
+
+  .segmented-control button {
+    flex: 1;
+  }
+
+  .archive-table-head {
+    display: none;
+  }
+
+  .log-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    margin-top: 12px;
+    padding: 14px;
+  }
+
+  .row-title-cell {
+    grid-template-columns: 84px minmax(0, 1fr);
+  }
+
+  .row-thumb {
+    width: 84px;
+    height: 56px;
+  }
+
+  .row-tags {
+    max-height: none;
+  }
+
+  .row-created {
+    font-size: 0.86rem;
+  }
+
+  .status-action-cell {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .row-actions {
+    justify-content: flex-start;
+  }
+
+  .field-grid,
+  .button-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    width: min(100vw - 18px, 520px);
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .codex-words {
+    font-size: 0.68rem;
+  }
+
+  .codex-words span + span::before {
+    width: 10px;
+    margin: 0 5px;
+  }
+
+  .archive-desk,
+  .focus-panel,
+  .composer {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,63 @@
+﻿.task-list-section {
+  --task-list-columns: minmax(300px, 1.38fr) minmax(260px, 0.92fr) minmax(168px, 0.56fr) minmax(184px, 0.58fr);
+
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-content: start;
+  min-height: 0;
+  padding: 0;
+  margin-top: 0;
+}
+
+.archive-table-head,
+.log-row {
+  display: grid;
+  grid-template-columns: var(--task-list-columns);
+  column-gap: 18px;
+  row-gap: 0;
+  align-items: center;
+  min-width: 0;
+}
+
+.archive-table-head {
+  margin-top: 0;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 244, 222, 0.56);
+  padding: 11px 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.archive-table-head > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-head-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.table-head-status strong {
+  color: rgba(255, 244, 222, 0.58);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.task-list {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  padding-right: 0;
+}
+

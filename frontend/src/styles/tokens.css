@@ -1,0 +1,31 @@
+﻿:root {
+  color-scheme: dark;
+  --ink: #070604;
+  --panel: rgba(19, 15, 9, 0.72);
+  --panel-strong: rgba(30, 22, 12, 0.86);
+  --text: #fff4d2;
+  --muted: #d9c79d;
+  --gold: #f0c66a;
+  --gold-bright: #ffe6a1;
+  --emerald: #123c32;
+  --emerald-bright: #2cd29a;
+  --crimson: #8d2b2b;
+  --line: rgba(255, 218, 140, 0.28);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  font-family:
+    "PingFang SC",
+    "Microsoft YaHei UI",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    "Source Han Sans SC",
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    Arial,
+    sans-serif;
+  color: var(--text);
+  background: #090703;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}

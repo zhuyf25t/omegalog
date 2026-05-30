@@ -1,0 +1,36 @@
+﻿.tension-1,
+.tension-2,
+.tension-3,
+.tension-4,
+.tension-5 {
+  --tension-line: rgba(190, 61, 47, 0.38);
+  --tension-glow: rgba(190, 61, 47, 0.16);
+  --tension-core: rgba(92, 20, 18, 0.18);
+}
+
+.tension-3,
+.tension-4 {
+  --tension-line: rgba(232, 82, 55, 0.58);
+  --tension-glow: rgba(232, 82, 55, 0.24);
+  --tension-core: rgba(132, 32, 22, 0.3);
+}
+
+.tension-5 {
+  --tension-line: rgba(255, 116, 72, 0.8);
+  --tension-glow: rgba(255, 74, 40, 0.38);
+  --tension-core: rgba(174, 38, 24, 0.44);
+}
+
+.focus-panel.tension-1,
+.focus-panel.tension-2,
+.focus-panel.tension-3,
+.focus-panel.tension-4,
+.focus-panel.tension-5 {
+  border-color: var(--tension-line);
+  box-shadow:
+    0 24px 76px rgba(0, 0, 0, 0.38),
+    0 0 58px var(--tension-glow),
+    inset 4px 0 0 var(--tension-line),
+    inset 0 0 90px var(--tension-core);
+}
+
