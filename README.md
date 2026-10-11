@@ -1,53 +1,57 @@
-# Type-Safe Codex Agents Pack
+# OmegaLog · 云间记（本地作业版）
 
-这是一个给 Codex 项目使用的多 Agent 工作流模板。它把《类型安全课》里的系统观整理成可放进项目根目录的规则文件、子 agent 配置和文档模板。
+React + TypeScript 的两页任务日志：少年与狐狸的云海视频封面 + 浅色云海任务列表。无需登录，任务保存在当前浏览器、当前地址的本机存储中。
 
-## 里面有什么
+仓库的 `main` 分支为当前版本；[old 分支](https://github.com/zhuyf25t/omegalog/tree/old)保留原版 OmegaLog 及其提交历史。
 
-```text
-AGENTS.md                         # 仓库根宪法：主 agent 的工作流与总原则
-.codex/config.toml                # Codex 子 agent 并发配置示例
-.codex/agents/*.toml              # 可被 Codex spawn 的项目级 custom agents
-agent_constitutions/*/AGENTS.md   # 每个 agent 的详细宪法
-docs/**/AGENTS.md                 # 文档目录的局部规则
-backend/**/AGENTS.md              # Scala/Cats/microservice 局部规则
-frontend/**/AGENTS.md             # React/TS/Zustand/CSS 局部规则
-templates/*.md                    # 从零或迁移项目时可复制的文档模板
-USAGE.md                          # 使用方式与推荐 prompt
+## 从 GitHub 下载后运行
+
+安装 Node.js 22.12 或更高版本，在项目目录运行：
+
+```sh
+npm ci
+npm run dev
 ```
 
-## 安装方式
+浏览器打开终端显示的本地地址。需要生成可提交的成品时，运行 `npm run build`，再双击 `start-local.cmd`。GitHub 仓库包含完整源码、图片、视频和导入示例；`dist/` 由构建生成，依赖、密钥、托管配置和临时文件不进入 Git。
 
-把本目录内容复制到你的项目根目录。项目根目录应该能看到：
+## 最简单的打开方法
 
-```text
-your-project/
-  AGENTS.md
-  .codex/
-  agent_constitutions/
-  docs/
-  backend/      # 如果项目有后端
-  frontend/     # 如果项目有前端
-```
+1. 解压交付 ZIP。
+2. 电脑已有 Node.js 时，双击 `start-local.cmd`，保持窗口打开。
+3. 浏览器打开 http://127.0.0.1:5173/ 。不需要安装 npm 依赖；交付包已经带有编译好的 `dist/`。
+4. 使用结束后关闭命令窗口。不要直接双击 dist/index.html。
 
-然后在项目根目录启动 Codex。若你已有自己的 `AGENTS.md`，不要直接覆盖；先合并根规则，保留你的项目特有命令。
+如果电脑没有 Node.js，请先安装 Node.js 22.12 或更高版本。源码开发使用 `npm ci`、`npm run dev`；修改源码后运行 `npm run build` 更新 dist。也可用 `node scripts/serve.cjs --port=5174` 指定端口。更换端口属于不同地址，浏览器记录不会自动同步。
 
-## 推荐对话方式
+## 导入和导出
 
-从零开始：
+- 点击“导入 JSON” → 选择文件 → 检查任务预览 → 选择合并或替换 → 确认。
+- 合并：新增不同 ID 的任务，相同 ID 保留本机版本。
+- 替换：把列表改为文件中的任务。每次导入前都会保留一份本机备份；列表底部“下载导入前备份”可下载最近一次导入前的数据，提示条还可以立即撤销。
+- 导出：点击“导出备份”，下载含全部任务的 JSON。
+- 支持本版 `{ "version": 1, "tasks": [...] }`、任务数组、旧版 OmegaLog 单条任务 JSON（weight 转为 priority）。旧版额外的延期计数、历史事件和附件不包含在本版任务字段中。
+- `examples/` 有可直接导入的例子。无效文件会给出提示，不改变现有任务。单次最多 5 MB / 5000 条。
+- API 凭据不是任务 JSON，不应导入或放进交付包。
 
-> 请按 Type-Safe workflow 从零开始帮我设计这个项目。先不要写代码，先采访我、解析产品图、建立 docs、对象关系、API contract 和 type safety registry。
+## 排序
 
-半成品迁移：
+排序提供优先级、截止时间、创建时间的两个方向。严格按当前字段对筛选结果排序，已完成任务不会被强制移到最后；状态由“全部 / 进行中 / 已完成”筛选控制。相同字段值会按截止时间和 ID 确定稳定顺序。左侧重点任务始终取未完成任务中优先级最高的一项。
 
-> 请按 Type-Safe migration workflow 扫描当前项目。先只读，不改代码。请生成同构 docs/mirror，标记 safe / uncertain / unsafe，然后给出小步重构计划。
+## 视频和画质
 
-新功能：
+封面与工作区的视频来自腾讯 TokenHub 的 `kling-video-v3`。请求配置为 10 秒、1080p、无声、固定镜头，并将同一插画作为首帧和尾帧。两段实测均为 1916 × 1080、10.04 秒、24 fps、H.264，无音轨。网页连续循环播放；保留模型生成的原始帧，只做 MP4 faststart 封装优化，没有重新编码、缩放、帧混合或倒放。
 
-> 请按 Type-Safe vertical slice workflow 加这个功能。先更新 docs 和 API registry，再实现，再运行检查 agent。
+当前为云海动态版（cloud-motion-v3）：近处蓬松云团明显漂移、鼓起与回落，中远景以不同速度缓慢流动；少年和狐狸有低头、眨眼等温柔互动，围巾与叶舟随风轻动。已检查六个时刻的画面及首尾对照。视频地址带版本标记，刷新页面即可加载新背景。
 
-## 重要提醒
+右下角支持暂停；减少动态效果偏好或视频出错时使用插画。工作区原画采用浅色、低对比构图。模型选项及调用结果见 `docs/video-options.md`，生成提示词与素材参数见 `docs/media-prompts.json`。API 只在制作阶段使用，运行网页无需 API、登录或联网。
 
-- `.codex/agents/*.toml` 是 Codex custom agents 配置；`agent_constitutions/*/AGENTS.md` 是详细角色宪法。
-- Codex 通常只在你明确要求时 spawn subagents。根 `AGENTS.md` 已经说明：用户说“使用 workflow / 使用 agents / 从零构建 / 迁移为类型安全”时，可视为允许启用必要子 agent。
-- 这些文件不会替你保证项目正确；它们的作用是让 Codex 每次工作都先回到同一套结构化规则。
+## 作业提交
+
+ZIP 包含源码、图片、视频和可直接启动的 dist。录制不超过 30 秒的操作：封面停留 5 秒 → 进入 Log → 导入 JSON / 新增任务 → 切换排序 → 标记完成。提交 ZIP 与录屏，总大小不超过 100 MB。不要提交 node_modules、API 密钥或个人任务备份。
+
+## 检查
+
+`npm run typecheck`、`npm test`、`npm run build`。测试需 Node.js 22.6+。
+
+界面结构参考用户自己的 https://github.com/zhuyf25t/omegalog 。图片使用 imagegen 生成，当前视频通过腾讯 TokenHub 使用可灵 V3 生成；凭据不在项目内。

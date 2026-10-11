@@ -1,0 +1,87 @@
+{
+  "source": "https://cloud.tencent.com/document/product/1823/135742",
+  "model": "kling-video-v3",
+  "duration_seconds_requested": 10,
+  "resolution_requested": "1080p",
+  "audio": false,
+  "same_image_as_start_and_end": true,
+  "prompts": {
+    "cover": "10秒循环的精美绘本云海动画，使用提供的同一张插画作为精确首帧与尾帧。保持金色夕阳、粉紫云海、金色叶舟、少年与狐狸的外观。固定摄影机，清晰的绘画细节。\n主要动态是云：画面原有的许多蓬松云团各自缓缓漂流，前景云团的轮廓和内部棉絮纹理持续卷动、扩散又聚拢。前景横向移动要一眼可见，在前两秒就能看出云的变化，10秒内每团云的横向活动范围约画面宽度的4%。云团同时有小而清楚的上下浮动，活动范围约画面高度的1.5%。中景云团漂流稍慢，远景更慢，前中后景有明显速度差。云团保持原来的低矮、疏松、圆润体积，像天空中的真实棉絮云，边缘细碎柔软，云与云之间仍有空隙。每团云只在自身附近小范围舒展变形，整个云海保持参考图中平缓开阔的地形和地平线。云海运动主要是横向漂流加局部鼓起、回落。\n少年和狐狸安静相伴：叶舟随云轻柔上下浮动，少年头发和黄色围巾随风柔软摆动。少年轻轻低头看狐狸再回到初始姿态；狐狸轻轻抬头、眨眼、动一动耳尖，尾巴轻摆归位。人物坐姿稳定，动作亲切温柔。太阳位置与整体曝光稳定。\n完整动作周期为10秒。各团云沿小范围平缓闭合轨迹运动，云边卷动舒展后恢复原形；叶舟、围巾、少年和狐狸做完动作自然回到起始姿态。结束时精确匹配提供的尾帧，让云团形状、云层位置、人物姿态、叶舟位置、围巾形状、构图和亮度与开头一致，首尾平滑连续，无停顿、跳变、倒放或切镜。中间的云朵漂流必须明显可见。\n严格避免：云墙、巨浪、海浪造型、山峰、龙卷风、大幅抬升的云海、连续光滑薄片、丝绸布帘、平行褶皱、长条光带、彩带。云朵不能连成一整张布，不能新长出巨大高峰。无新增物体、文字或标志，叶舟枝梗不长出新叶。不模糊、不重影、不闪烁、不推拉缩放镜头。",
+    "workspace": "制作10秒可循环的浅色绘本云海动画，首帧与尾帧均严格使用提供的同一张插画。保留奶油、淡粉和淡紫色的明亮云海、右下角少年与狐狸的金色叶舟；摄影机固定，云层细节清晰，中央与左侧保留柔和阅读空间。\n整片云海应有一眼可见的动态：原有蓬松云团各自缓缓横向漂流，云边棉絮轻卷，内部柔软纹理持续舒展、扩散与聚拢。前景云团横向活动范围约画面宽度的3%，同时小幅上下浮动，活动范围约画面高度的1%；中景慢一点，远景更慢，形成舒缓但明显的层次变化。运动从前两秒就应能看见。各团云保持低矮、圆润、疏松、棉絮状的立体形态，彼此之间有空隙，局部轻柔鼓起后回落；整个云海保持原图平缓开阔的高度和地平线。浅色画风与清楚可见的云层动态并存。\n右下角叶舟轻轻上下浮动。少年围巾柔软摆动、发梢随风轻动，少年微微低头看狐狸再归位；狐狸温柔抬头、自然眨眼、耳尖轻动、尾巴轻摆后归位。角色始终坐稳，外观与相对位置保持一致。光照稳定。\n10秒是完整周期：每团云沿自身附近的小范围平缓闭合轨迹漂流，云的局部形变舒展后恢复原状；叶舟和所有角色动作连续平滑地回到起始状态。末帧精确匹配提供的尾帧，云形、云位置、构图、角色姿态、围巾和叶舟位置、亮度都与开头一致，衔接时无跳变、停顿、倒放或切镜。\n严格避免云墙、巨浪、海浪形状、山峰、龙卷风、巨大的拱形云带、光滑云薄片、丝绸布帘、平行褶皱、长条光带、彩带。不要把云连成一整张布，不新长出高耸云峰。不新增物体、角色、文字或界面，叶舟枝梗不长新叶。不模糊、不重影、不闪烁，不推拉平移缩放镜头。"
+  },
+  "revision": "cloud-motion-v3",
+  "processing": "Stream copy and faststart only. No re-encoding, resizing, frame blending, reversal or speed change. Same source image supplied as first and last frame. Original Tencent output retained outside project.",
+  "generated_at": "2026-10-11",
+  "image_tool": "built-in image_gen",
+  "actual_media": {
+    "cover": {
+      "bytes": 8905404,
+      "duration_seconds": 10.04,
+      "stream": "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 1916x1080, 7092 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+      "width": 1916,
+      "height": 1080,
+      "fps": 24.0,
+      "has_audio": false,
+      "sampled_frames": 100,
+      "mean_adjacent_pixel_difference": 0.877,
+      "median_adjacent_pixel_difference": 0.828,
+      "seam_pixel_difference": 1.145
+    },
+    "workspace": {
+      "bytes": 8877218,
+      "duration_seconds": 10.04,
+      "stream": "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 1916x1080, 7069 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+      "width": 1916,
+      "height": 1080,
+      "fps": 24.0,
+      "has_audio": false,
+      "sampled_frames": 100,
+      "mean_adjacent_pixel_difference": 1.205,
+      "median_adjacent_pixel_difference": 1.235,
+      "seam_pixel_difference": 0.777
+    }
+  },
+  "motion_comparison": {
+    "cover": {
+      "previous": {
+        "native_frame_count": 241,
+        "mean_cloud_frame_change": 0.0366,
+        "peak_cloud_change_from_start": 0.6735,
+        "first_last_mean_pixel_difference_0_255": 0.7706,
+        "mean_adjacent_frame_difference_0_255": 0.1552,
+        "max_adjacent_frame_difference_0_255": 0.3767
+      },
+      "new": {
+        "native_frame_count": 241,
+        "mean_cloud_frame_change": 0.3885,
+        "peak_cloud_change_from_start": 6.834,
+        "first_last_mean_pixel_difference_0_255": 0.8797,
+        "mean_adjacent_frame_difference_0_255": 0.4498,
+        "max_adjacent_frame_difference_0_255": 1.7955
+      },
+      "cloud_frame_change_ratio": 10.61,
+      "cloud_peak_change_ratio": 10.15
+    },
+    "workspace": {
+      "previous": {
+        "native_frame_count": 241,
+        "mean_cloud_frame_change": 0.1648,
+        "peak_cloud_change_from_start": 3.2069,
+        "first_last_mean_pixel_difference_0_255": 0.667,
+        "mean_adjacent_frame_difference_0_255": 0.1636,
+        "max_adjacent_frame_difference_0_255": 0.3067
+      },
+      "new": {
+        "native_frame_count": 241,
+        "mean_cloud_frame_change": 0.7938,
+        "peak_cloud_change_from_start": 7.6884,
+        "first_last_mean_pixel_difference_0_255": 0.7124,
+        "mean_adjacent_frame_difference_0_255": 0.6581,
+        "max_adjacent_frame_difference_0_255": 0.8983
+      },
+      "cloud_frame_change_ratio": 4.82,
+      "cloud_peak_change_ratio": 2.4
+    }
+  },
+  "quality_note": "Cloud-region differences are local QA indicators, not perceptual motion ratings. First/last frames visually checked; compressed output frames are not pixel-identical."
+}

@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "import-demo-1",
+      "title": "示例 A：高优先级已完成",
+      "note": "用于检查导入和排序，可以删除。",
+      "tags": [
+        "导入示例"
+      ],
+      "priority": 10,
+      "deadline": "2026-10-14T15:59:00Z",
+      "createdAt": "2026-10-09T04:00:00Z",
+      "status": "done",
+      "completedAt": "2026-10-10T04:00:00Z"
+    },
+    {
+      "id": "import-demo-2",
+      "title": "示例 B：最早截止",
+      "note": "用于检查导入和排序，可以删除。",
+      "tags": [
+        "导入示例"
+      ],
+      "priority": 3,
+      "deadline": "2026-10-12T15:59:00Z",
+      "createdAt": "2026-10-08T04:00:00Z",
+      "status": "active",
+      "completedAt": null
+    },
+    {
+      "id": "import-demo-3",
+      "title": "示例 C：最新创建",
+      "note": "用于检查导入和排序，可以删除。",
+      "tags": [
+        "导入示例"
+      ],
+      "priority": 6,
+      "deadline": "2026-10-16T15:59:00Z",
+      "createdAt": "2026-10-11T04:00:00Z",
+      "status": "active",
+      "completedAt": null
+    },
+    {
+      "id": "import-demo-4",
+      "title": "示例 D：最早创建",
+      "note": "用于检查导入和排序，可以删除。",
+      "tags": [
+        "导入示例"
+      ],
+      "priority": 8,
+      "deadline": "2026-10-13T15:59:00Z",
+      "createdAt": "2026-10-01T04:00:00Z",
+      "status": "active",
+      "completedAt": null
+    },
+    {
+      "id": "import-demo-5",
+      "title": "示例 E：最低优先级",
+      "note": "用于检查导入和排序，可以删除。",
+      "tags": [
+        "导入示例"
+      ],
+      "priority": 1,
+      "deadline": "2026-10-15T15:59:00Z",
+      "createdAt": "2026-10-05T04:00:00Z",
+      "status": "active",
+      "completedAt": null
+    },
+    {
+      "id": "import-demo-6",
+      "title": "示例 F：最晚截止",
+      "note": "用于检查导入和排序，可以删除。",
+      "tags": [
+        "导入示例"
+      ],
+      "priority": 5,
+      "deadline": "2026-10-20T15:59:00Z",
+      "createdAt": "2026-10-07T04:00:00Z",
+      "status": "active",
+      "completedAt": null
+    }
+  ]
+}

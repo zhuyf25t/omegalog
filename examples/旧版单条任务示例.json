@@ -1,0 +1,13 @@
+{
+  "id": "legacy-import-example",
+  "title": "旧版 JSON 导入示例",
+  "note": "用于检查导入和排序，可以删除。",
+  "tags": [
+    "导入示例"
+  ],
+  "deadline": "2026-10-14T15:59:00Z",
+  "createdAt": "2026-10-09T04:00:00Z",
+  "status": "done",
+  "completedAt": "2026-10-10T04:00:00Z",
+  "weight": 10
+}
